@@ -3,6 +3,7 @@ package repository
 import (
 	"context"
 	"database/sql"
+	"fmt"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -24,7 +25,7 @@ func NewGormProductRepository(db *sql.DB) ProductRepository {
 		Conn: db,
 	}), &gorm.Config{})
 	if err != nil {
-		// handle error
+		fmt.Println(err)
 	}
 
 	gormDB.AutoMigrate(&entities.Product{})
