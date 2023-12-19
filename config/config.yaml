@@ -1,0 +1,13 @@
+# config.yaml
+app:
+  name: ProductApp
+  version: 1.0
+server:
+  port: 3000
+database:
+  host: localhost
+  port: 5432
+  user: myuser
+  password: mypassword
+  dbname: mydatabase
+  sslmode: disable
